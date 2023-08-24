@@ -48,7 +48,7 @@ always @(negedge sclk) begin		// send data via sdata pins
 				15 : sdata <= ADCdbits[0];
 				16 : start <= 0;
 			endcase
-		else begin
+		end else begin
 			case (bitnum)
 				7 : ADCdbits[8] <= sdata;
 				8 : ADCdbits[7] <= sdata;
